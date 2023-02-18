@@ -1,5 +1,7 @@
 # cmake-hello-world
 
+[![Build on Ubuntu](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/ubuntu.yml)
+
 This is a simple project to demonstrate how to use the [CMake](https://cmake.org/) build system to build a cross-platform C++ project.
 
 It contains a simple C++ program that calculates the square root of a number.
