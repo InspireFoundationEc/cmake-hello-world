@@ -24,7 +24,9 @@ cmake --build .
 _Note: for building under `Release` mode, replace `Debug` with `Release` in the above commands._
 
 ## Run
-Inside the `build` directory we created above, we can find the executable file `SquareRootCalc` (or `SquareRootCalc.exe` on Windows) in the `Debug` folder. We can run it as follows:
+Inside the `build` directory we created above, we can find the executable file `SquareRootCalc`. (When compiling on Windows with MSVC it will have the `.exe` extension and it'll be placed in a folder called `Debug`). 
+
+We can run it as follows:
 
 ```bash
 # Windows
