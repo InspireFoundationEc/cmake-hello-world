@@ -23,6 +23,11 @@ Inside the `build` directory:
 ./SquareRootCalc 2
 ```
 
+<!--
+```bash
+rm -rf * && cmake .. && cmake --build . && ./Debug/SquareRootCalc 2
+```
+-->
 
 ### Resources
 - [CMake Tutorial steps](https://cmake.org/cmake/help/latest/guide/tutorial/A%20Basic%20Starting%20Point.html)

@@ -1,0 +1,3 @@
+// the configured options and settings for Tutorial
+#define SquareRootCalc_VERSION_MAJOR @SquareRootCalc_VERSION_MAJOR@
+#define SquareRootCalc_VERSION_MINOR @SquareRootCalc_VERSION_MINOR@
