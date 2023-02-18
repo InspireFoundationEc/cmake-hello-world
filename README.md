@@ -6,10 +6,10 @@ cd build
 
 # Windows
 cmake ../
-cmake --build . --config Release
+cmake --build . --config Debug
 
 # Linux
-cmake -DCMAKE_BUILD_TYPE=Release ../
+cmake -DCMAKE_BUILD_TYPE=Debug ../
 cmake --build .
 ```
 
@@ -17,7 +17,7 @@ cmake --build .
 Inside the `build` directory:
 ```bash
 # Windows
-./Release/SquareRootCalc.exe 2
+./Debug/SquareRootCalc.exe 2
 
 # Linux
 ./SquareRootCalc 2
