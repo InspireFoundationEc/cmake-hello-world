@@ -8,7 +8,7 @@ It contains a C++ program that calculates the square root of a number.
 
 ## Prerequisites
 
-- [CMake](https://cmake.org/install/) (version 3.10 or higher)
+- [CMake](https://cmake.org/install/) (version 3.15 or higher)
 - A C++ compiler (e.g. [GCC](https://gcc.gnu.org/), [Clang](https://clang.llvm.org/), [MSVC](https://visualstudio.microsoft.com/))
 
 ## Build
