@@ -63,3 +63,4 @@ rm -rf * && cmake .. && cmake --build . && ./Debug/SquareRootCalc 2
 ## Resources
 - [CMake Tutorial steps](https://cmake.org/cmake/help/latest/guide/tutorial/)
 - [CMake Tutorial source code](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
+- [CMake + Catch2 Integration](https://github.com/catchorg/Catch2/blob/devel/docs/cmake-integration.md)
