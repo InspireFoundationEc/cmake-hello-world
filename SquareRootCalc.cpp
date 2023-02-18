@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 
+#include "DummyMathFunctions.h"
 #include "SquareRootCalcConfig.h"
 
 int main(int argc, char* argv[]) {
@@ -16,7 +17,7 @@ int main(int argc, char* argv[]) {
 
     const double inputValue = std::stod(argv[1]);
 
-    const double outputValue = sqrt(inputValue);
+    const double outputValue = mysqrt(inputValue);
     std::cout << "The square root of " << inputValue << " is " << outputValue
               << std::endl;
     return 0;
