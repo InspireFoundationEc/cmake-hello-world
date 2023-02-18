@@ -1,4 +1,14 @@
 # cmake-hello-world
+
+This is a simple project to demonstrate how to use the [CMake](https://cmake.org/) build system to build a cross-platform C++ project.
+
+It contains a simple C++ program that calculates the square root of a number.
+
+## Prerequisites
+
+- [CMake](https://cmake.org/install/) (version 3.10 or higher)
+- A C++ compiler (e.g. [GCC](https://gcc.gnu.org/), [Clang](https://clang.llvm.org/), [MSVC](https://visualstudio.microsoft.com/))
+
 ## Build
 
 CMake documentation advices the following:
@@ -42,6 +52,6 @@ rm -rf * && cmake .. && cmake --build . && ./Debug/SquareRootCalc 2
 ```
 -->
 
-### Resources
+## Resources
 - [CMake Tutorial steps](https://cmake.org/cmake/help/latest/guide/tutorial/)
 - [CMake Tutorial source code](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
