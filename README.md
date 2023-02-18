@@ -1,6 +1,6 @@
 # cmake-hello-world
 
-[![Build on Ubuntu](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/ubuntu.yml/badge.svg)](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/ubuntu.yml)
+[![Build & Test](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/build_and_test.yml/badge.svg)](https://github.com/InspireFoundationEc/cmake-hello-world/actions/workflows/build_and_test.yml)
 
 This is a simple project to demonstrate how to use [CMake](https://cmake.org/) for building a cross-platform C++ project.
 
