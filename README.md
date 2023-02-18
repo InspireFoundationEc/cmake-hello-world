@@ -4,7 +4,7 @@
 
 This is a simple project to demonstrate how to use [CMake](https://cmake.org/) for building a cross-platform C++ project.
 
-It contains a C++ program that calculates the square root of a number.
+It contains a couple of functions (sqrt and factorial) and their respective unit tests (using [Catch2](https://github.com/catchorg/Catch2)).
 
 ## Prerequisites
 
@@ -46,6 +46,12 @@ We can run it as follows:
 
 # Linux
 ./SquareRootCalc 2
+```
+
+## Test
+This project is configured for testing with the [Catch2](https://github.com/catchorg/Catch2) library. Inside the `build` directory, run:
+```bash
+ctest
 ```
 
 <!--

@@ -1,1 +1,1 @@
-add_library(DummyMathFunctions mysqrt.cpp)
+add_library(DummyMathFunctions DummyMathFunctions.cpp)
