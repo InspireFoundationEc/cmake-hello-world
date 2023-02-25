@@ -1,4 +1,4 @@
-// A simple program that computes the square root of a number
+// A simple program that computes the factorial of a number
 #include <cmath>
 #include <iostream>
 #include <string>
@@ -6,7 +6,6 @@
 #include "DummyMathFunctions.h"
 
 int main(int argc, char* argv[]) {
-    // Print app name and prompt for input (number)
     std::cout << argv[0] << std::endl;
     std::cout << "Enter a number: ";
 
@@ -15,11 +14,13 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
-    const double inputValue = std::stod(argv[1]);
+    const uint32_t inputValue = std::stoul(argv[1]);
 
-    const double outputValue = mysqrt(inputValue);
+    const uint32_t outputValue = factorial(inputValue);
+
     std::cout << std::endl
-              << "The square root of " << inputValue << " is " << outputValue
+              << "The factorial of " << inputValue << " is " << outputValue
               << std::endl;
+
     return 0;
 }
