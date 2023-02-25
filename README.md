@@ -75,11 +75,11 @@ You can run them as follows:
 
 ### Shortcuts
 
-- Clean everything, re-generate the project files, build the project, run the tests and run the SquareRootCalc & FactorialCalc CLI apps (assuming you're in the `build` directory):
+Clean everything, re-generate the project files, build the project, run the tests and run the SquareRootCalc & FactorialCalc CLI apps (assuming you're in the `build` directory):
 
-    ```bash
-    rm -rf * && cmake ../ && cmake --build . && ./Debug/tests.exe && ./Debug/SquareRootCalc.exe 2 && ./Debug/FactorialCalc.exe 4
-    ```
+```bash
+rm -rf * && cmake ../ && cmake --build . && ./Debug/tests.exe && ./Debug/SquareRootCalc.exe 2 && ./Debug/FactorialCalc.exe 4
+```
 
 
 ## Resources
