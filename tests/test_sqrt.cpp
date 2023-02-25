@@ -1,10 +1,10 @@
 #include <stdint.h>
 
-#include <catch2/catch_test_macros.hpp>
 #include <cmath>
 #include <iostream>
 
 #include "DummyMathFunctions.h"
+#include "doctest.h"
 
 bool areDoublesNearlyEqual(double a, double b) {
     // Source:
@@ -25,19 +25,12 @@ bool areDoublesNearlyEqual(double a, double b) {
     return (diff / std::max(abs_a, abs_b)) <= relative_error;
 }
 
-TEST_CASE("Factorials are computed", "[factorial]") {
-    REQUIRE(factorial(1) == 1);
-    REQUIRE(factorial(2) == 2);
-    REQUIRE(factorial(3) == 6);
-    REQUIRE(factorial(10) == 3'628'800);
-}
-
-TEST_CASE("Square roots are computed", "[square]") {
-    REQUIRE(areDoublesNearlyEqual(mysqrt(0), 0));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(1), 1));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(2), std::sqrt(2)));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(3), std::sqrt(3)));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(4), 2));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(5), std::sqrt(5)));
-    REQUIRE(areDoublesNearlyEqual(mysqrt(6), std::sqrt(6)));
+TEST_CASE("Square roots are computed") {
+    CHECK(areDoublesNearlyEqual(mysqrt(0), 0));
+    CHECK(areDoublesNearlyEqual(mysqrt(1), 1));
+    CHECK(areDoublesNearlyEqual(mysqrt(2), std::sqrt(2)));
+    CHECK(areDoublesNearlyEqual(mysqrt(3), std::sqrt(3)));
+    CHECK(areDoublesNearlyEqual(mysqrt(4), 2));
+    CHECK(areDoublesNearlyEqual(mysqrt(5), std::sqrt(5)));
+    CHECK(areDoublesNearlyEqual(mysqrt(6), std::sqrt(6)));
 }

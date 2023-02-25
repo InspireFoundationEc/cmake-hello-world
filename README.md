@@ -4,7 +4,7 @@
 
 This is a simple project to demonstrate how to use [CMake](https://cmake.org/) for building a cross-platform C++ project.
 
-It contains a couple of functions (sqrt and factorial) and their respective unit tests (using [Catch2](https://github.com/catchorg/Catch2)).
+It contains a couple of functions (sqrt and factorial) and their respective unit tests (using [doctest](https://github.com/doctest/doctest)).
 
 ## Prerequisites
 
@@ -14,54 +14,75 @@ It contains a couple of functions (sqrt and factorial) and their respective unit
 ## Usage
 ### Build
 
-CMake documentation advices the following:
-> “Out-of-source build” is a good practice of keeping separate the generated files of the binary tree from the source files of the source tree. 
+We follow the “out-of-source build” approach recommended by the CMake documentation.
 
-Following this approach, we create a `build` directory and run CMake from there. The CMakeLists.txt file is located in the root directory of the project. 
+1. Create a `build` directory and move into it:
+    ```bash
+    mkdir build
+    cd build
+    ```
 
-**Warning**: Always make sure that build directories are added to the `.gitignore` file.
+2. Generate the project files:
+    ```bash
+    # On Windows (will generate project files to compile with MSVC)
+    cmake ../
 
-```bash
-mkdir build
-cd build
+    # On Linux (will generate Makefiles for compiling with GCC)
+    cmake -DCMAKE_BUILD_TYPE=Debug ../
+    ```
 
-# Windows
-cmake ../
-cmake --build . --config Debug
+3. Build the project:
+    ```bash
+    # On Windows
+    cmake --build . --config Debug
 
-# Linux
-cmake -DCMAKE_BUILD_TYPE=Debug ../
-cmake --build .
-```
+    # On Linux
+    cmake --build .
+    ```
 
 _Note: for building under `Release` mode, replace `Debug` with `Release` in the above commands._
 
-### Run
-Inside the `build` directory we created above, we can find the executable file `SquareRootCalc`. (When compiling on Windows with MSVC it will have the `.exe` extension and it'll be placed in a folder called `Debug`). 
+#### Re-building after changes
 
-We can run it as follows:
+- If you make changes to CMakeLists.txt, you need to repeat steps 2 and 3. 
+
+- But if you only make changes to the source files, just repeat step 3.
+
+### Run the tests
+This project is configured for testing with the [doctest](https://github.com/doctest/doctest) library. Inside the `build` directory, run:
+```bash
+# Windows
+./Debug/tests.exe
+
+# Linux
+./tests
+```
+
+### Run the app
+Inside the `build` directory we created above, we can find the executable files for `SquareRootCalc` and `FactorialCalc`. (When compiling on Windows with MSVC they will have the `.exe` extension and they'll be placed in a folder called `Debug` or `Release` depending on the configuration chosen at build-time). 
+
+You can run them as follows:
 
 ```bash
 # Windows
 ./Debug/SquareRootCalc.exe 2
+./Debug/FactorialCalc.exe 4
 
 # Linux
 ./SquareRootCalc 2
+./FactorialCalc 4
 ```
 
-### Test
-This project is configured for testing with the [Catch2](https://github.com/catchorg/Catch2) library. Inside the `build` directory, run:
-```bash
-ctest
-```
+### Shortcuts
 
-<!--
-```bash
-rm -rf * && cmake .. && cmake --build . && ./Debug/SquareRootCalc 2
-```
--->
+- Clean everything, re-generate the project files, build the project, run the tests and run the SquareRootCalc & FactorialCalc CLI apps (assuming you're in the `build` directory):
+
+    ```bash
+    rm -rf * && cmake ../ && cmake --build . && ./Debug/tests.exe && ./Debug/SquareRootCalc.exe 2 && ./Debug/FactorialCalc.exe 4
+    ```
+
 
 ## Resources
 - [CMake Tutorial steps](https://cmake.org/cmake/help/latest/guide/tutorial/)
 - [CMake Tutorial source code](https://github.com/Kitware/CMake/tree/master/Help/guide/tutorial)
-- [CMake + Catch2 Integration](https://github.com/catchorg/Catch2/blob/devel/docs/cmake-integration.md)
+- [Doctest tutorial](https://github.com/doctest/doctest/blob/master/doc/markdown/tutorial.md)
